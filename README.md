@@ -1,6 +1,11 @@
 # 🎬 Simple Movies App
 
-A React + TypeScript movie search and favorites application. This app demonstrates debounced search, global state management with Context + Reducer, protected routing, and component-level performance optimization. Since the application was built using a mock API, all movies are titled `Movie Title ${index}`, searching for this would make it easy to find a movie.
+A React + TypeScript movie search and favorites application. This app demonstrates debounced search, global state management with Context + Reducer, protected routing, and component-level performance optimization.
+
+
+## How to search and find a movie
+
+Since the application is built using a mock API, all movies are titled `Movie Title ${index}`, searching within this parameter would make it easy to find a movie.
 
 ---
 
