@@ -23,7 +23,7 @@ Since the application is built using a mock API, all movies are titled `Movie Ti
 
 ## 🚀 Demo
 
-[Netlify link](https://68398165083d3e246b641dd1--gghdsw.netlify.app/) — or deploy locally using the instructions below.
+[Netlify link](https://gghdsw.netlify.app/) — or deploy locally using the instructions below.
 
 ---
 
