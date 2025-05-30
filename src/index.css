@@ -1,0 +1,45 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --color-white: #fff;
+  --color-white-omega: #ccc;
+  --color-white-alpha: rgba(255, 255, 255, 0.87);
+  --color-black: #000;
+  --color-dark-bg: #242424;
+  --color-yellow: #f9c80e;
+  --color-yellow-alpha: #ff0;
+  --color-yellow-omega: #b8ad65;
+  --color-red: #ff4d4f;
+  --color-goldenrod: goldenrod;
+  --color-gold: gold;
+
+  --width-lg: 900px;
+  --width-md: 800px;
+  --width-sm: 600px;
+  --width-xs: 400px;
+
+  color-scheme: light dark;
+  color: var(--color-white-alpha);
+  background-color: var(--color-dark-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  text-wrap: pretty;
+}
