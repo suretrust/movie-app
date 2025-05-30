@@ -18,7 +18,7 @@ A React + TypeScript movie search and favorites application. This app demonstrat
 
 ## 🚀 Demo
 
-Coming Soon — or deploy locally using the instructions below.
+[Netlify link](https://68398165083d3e246b641dd1--gghdsw.netlify.app/) — or deploy locally using the instructions below.
 
 ---
 
