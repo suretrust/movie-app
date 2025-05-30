@@ -1,6 +1,6 @@
 # 🎬 Simple Movies App
 
-A React + TypeScript movie search and favorites application. This app demonstrates debounced search, global state management with Context + Reducer, protected routing, and component-level performance optimization.
+A React + TypeScript movie search and favorites application. This app demonstrates debounced search, global state management with Context + Reducer, protected routing, and component-level performance optimization. Since the application was built using a mock API, all movies are titled `Movie Title ${index}`, searching for this would make it easy to find a movie.
 
 ---
 
@@ -138,6 +138,8 @@ yarn test:coverage
 - api: All movie data is mock-generated (7000+ items) to simulate real-world mini-scale
 
 ### 📌 Future Enhancements
+
+- Move navigation bar from top to bottom for mobile view
 
 - Save how far user has scrolled when they click on favorites should in case they are not logged in so that they are scrolled to the exact movie after logging in. (Another solution is to use a modal for logging in to improve UX)
 
