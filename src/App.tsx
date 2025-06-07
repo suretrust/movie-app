@@ -1,32 +1,55 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
 import './App.css';
-import { MovieSearch } from './components/MovieSearch';
-import { Login } from './components/Login';
-import { MovieDetails } from './components/MovieDetails';
 import { ProtectedRoute } from './components/ProtectedRoute';
-import { Favorites } from './components/Favorites';
-import { NotFound } from './components/NotFound';
 import { NavBar } from './components/NavBar';
+import { lazy, Suspense } from 'react';
+import { LoadingMessage } from './components/LoadingMessage';
+
+const LazyMovieSearch = lazy(() =>
+  import('./components/MovieSearch').then((module) => ({
+    default: module.MovieSearch,
+  }))
+);
+const LazyLogin = lazy(() =>
+  import('./components/Login').then((module) => ({ default: module.Login }))
+);
+const LazyMovieDetails = lazy(() =>
+  import('./components/MovieDetails').then((module) => ({
+    default: module.MovieDetails,
+  }))
+);
+const LazyFavorites = lazy(() =>
+  import('./components/Favorites').then((module) => ({
+    default: module.Favorites,
+  }))
+);
+const LazyNotFound = lazy(() =>
+  import('./components/NotFound').then((module) => ({
+    default: module.NotFound,
+  }))
+);
 
 function App() {
   return (
     <BrowserRouter>
       <NavBar />
-      <Routes>
-        <Route path='/' element={<MovieSearch />} />
-        <Route path='login' element={<Login />} />
-        <Route path='movies/:movieId' element={<MovieDetails />} />
-        <Route
-          path='favorites'
-          element={
-            <ProtectedRoute>
-              <Favorites />
-            </ProtectedRoute>
-          }
-        />
+      <Suspense fallback={<LoadingMessage />}>
+        <Routes>
+          <Route path='/' element={<LazyMovieSearch />} />
+          <Route path='login' element={<LazyLogin />} />
+          <Route path='movies/:movieId' element={<LazyMovieDetails />} />
+          <Route
+            path='favorites'
+            element={
+              <ProtectedRoute>
+                <LazyFavorites />
+              </ProtectedRoute>
+            }
+          />
 
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+          <Route path='*' element={<LazyNotFound />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
