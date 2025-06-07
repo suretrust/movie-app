@@ -44,7 +44,7 @@ export const MovieItemComponent = memo(
     onClick: (movieId: string) => void;
   }) => (
     <MovieItem key={movie.movieId}>
-      <Poster src={movie.poster} alt={movie.title} />
+      <Poster src={movie.poster} alt={movie.title} loading='lazy' />
       <MovieDetails>
         <TitleAndStar movie={movie} onClick={onClick} />
         <MovieDetailsRow name='release year' value={movie.year} />
